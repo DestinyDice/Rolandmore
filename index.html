@@ -1,235 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calculadora de Daño - Sword World</title>
-  <!-- Fuente externa -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Fondo desde GitHub</title>
   <style>
-    /* Variables para mantener consistencia */
-    :root {
-      --background-image: url("https://i.ibb.co/21t4rKv1/Critical-HIT.jpg");
-      --background-dark: #1c1c1c;
-      --card-bg: rgba(44, 44, 44, 0.85);
-      --text-color: #ffffff;
-      --accent-green: #00ffcc;
-      --button-green: #00cc88;
-      --button-green-hover: #00ff99;
-      --result-color: red;
-      --input-bg: #3c3c3c;
-      --input-border: #555;
-    }
-
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      background: var(--background-dark) url(var(--background-image)) no-repeat center center/cover;
-      color: var(--text-color);
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://raw.githubusercontent.com/DestinyDice/Rolandmore/main/Critical%20HIT!.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
     }
 
-    .contenedor {
-      width: 25%;
-      min-width: 300px;
-      background-color: var(--card-bg);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      color: var(--accent-green);
-      text-align: center;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      width: 100%;
-    }
-
-    select, input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: 1px solid var(--input-border);
-      font-size: 16px;
-      background-color: var(--input-bg);
-      color: var(--text-color);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    select:focus, input:focus {
-      outline: none;
-      border-color: var(--accent-green);
-      box-shadow: 0 0 5px var(--accent-green);
-    }
-
-    button {
-      width: 100%;
-      background-color: var(--button-green);
-      color: var(--text-color);
-      padding: 10px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-      background-color: var(--button-green-hover);
-    }
-
-    button:active {
-      transform: scale(0.98);
-    }
-
-    #resultado {
-      font-size: 20px;
-      margin-top: 30px;
-      color: var(--result-color);
-      text-align: center;
-    }
-
-    #historial {
-      margin-top: 30px;
-      width: 100%;
-      color: var(--text-color);
-    }
-
-    #historial h3 {
-      margin-bottom: 10px;
-    }
-
-    #historial ul {
-      list-style: none;
-      padding: 0;
-      max-height: 150px;
-      overflow-y: auto;
-    }
-
-    #historial li {
-      padding: 5px 0;
-      border-bottom: 1px solid #333;
-      transition: background-color 0.3s;
-    }
-
-    #historial li:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Responsividad para dispositivos pequeños */
-    @media (max-width: 600px) {
-      .contenedor {
-        width: 90%;
-        padding: 20px;
-      }
+    .contenido {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
     }
   </style>
 </head>
 <body>
-  <div class="contenedor">
-    <h1>Calculadora de Daño</h1>
-
-    <label for="tabla">Tabla de daño:</label>
-    <select id="tabla">
-      <option value="lanza21">LANZA 21</option>
-      <option value="atk16">ATK 16</option>
-    </select>
-
-    <label for="tirada">Tirada (2d6):</label>
-    <input type="number" id="tirada" min="2" max="12" placeholder="2 a 12">
-
-    <label>
-      <input type="checkbox" id="critico"> ¿Crítico?
-    </label>
-
-    <label for="bonificador">Bonificador:</label>
-    <input type="number" id="bonificador" placeholder="0">
-
-    <label for="defensa">Defensa del enemigo:</label>
-    <input type="number" id="defensa" placeholder="0">
-
-    <button onclick="calcularDaño()">Calcular</button>
-
-    <div id="resultado">Resultado: -</div>
-
-    <div id="historial">
-      <h3>Últimos 5 daños:</h3>
-      <ul id="listaHistorial"></ul>
-    </div>
+  <div class="contenido">
+    <h1>¡Bienvenido a mi página!</h1>
+    <p>Esta es una prueba usando tu imagen como fondo desde GitHub.</p>
   </div>
-
-  <script>
-    const tablas = {
-      lanza21: [0, 0, 0, 1, 2, 3, 4, 6, 6, 7, 8, 9, 10],
-      atk16:   [0, 0, 0, 1, 2, 3, 4, 4, 5, 6, 7, 7, 8]
-    };
-
-    let acumulado = 0;
-    const historial = [];
-
-    function calcularDaño() {
-      const tablaSeleccionada = document.getElementById("tabla").value;
-      const tabla = tablas[tablaSeleccionada];
-
-      let tirada = parseInt(document.getElementById("tirada").value);
-      const critico = document.getElementById("critico").checked;
-      const bonificador = parseInt(document.getElementById("bonificador").value) || 0;
-      const defensa = parseInt(document.getElementById("defensa").value) || 0;
-
-      if (isNaN(tirada) || tirada < 2 || tirada > 12) {
-        alert("Por favor ingresa una tirada válida entre 2 y 12.");
-        return;
-      }
-
-      acumulado += tabla[tirada];
-
-      if (critico) {
-        alert("¡Crítico detectado! Vuelve a lanzar los dados y marca si sigue siendo crítico.");
-        document.getElementById("tirada").value = "";
-        document.getElementById("critico").checked = false;
-        document.getElementById("resultado").innerText = "Daño parcial: " + acumulado + " (aún puede continuar)";
-      } else {
-        let total = acumulado + bonificador - defensa;
-        if (total < 0) total = 0;
-
-        document.getElementById("resultado").innerText = "Resultado Final: " + total;
-        guardarEnHistorial(total);
-        acumulado = 0;
-      }
-    }
-
-    function guardarEnHistorial(valor) {
-      historial.unshift(valor);
-      if (historial.length > 5) {
-        historial.pop();
-      }
-      actualizarHistorial();
-    }
-
-    function actualizarHistorial() {
-      const lista = document.getElementById("listaHistorial");
-      lista.innerHTML = "";
-      historial.forEach((dano, index) => {
-        const li = document.createElement("li");
-        li.textContent = `#${index + 1}: ${dano} de daño`;
-        lista.appendChild(li);
-      });
-    }
-  </script>
 </body>
 </html>
