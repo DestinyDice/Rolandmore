@@ -132,12 +132,50 @@
     }
 
     /* Responsividad para dispositivos pequeños */
-    @media (max-width: 600px) {
-      .contenedor {
-        width: 90%;
-        padding: 20px;
-      }
-    }
+   @media (max-width: 600px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .contenedor {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  label {
+    font-size: 0.95em;
+  }
+
+  select, input {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  #resultado {
+    font-size: 1.2em;
+  }
+
+  #historial h3 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  #historial li {
+    font-size: 0.95em;
+  }
+}
   </style>
 </head>
 <body>
